@@ -1,0 +1,20 @@
+$primary: #2b2d42;
+$secondary: #8d99ae;
+$tertiary: #edf2f4;
+$success: #edf2f4;
+$navbar-brand-color: $tertiary;
+
+$navbar-dark-brand-color: #edf2f4;
+$navbar-light-brand-color: #edf2f4;
+$navbar-toggler-font-size: 2em;
+$navbar-toggler-border-color: #edf2f4;
+$navbar-brand-font-size: 2rem;
+$grid-gutter-width: 0;
+$btn-border-radius: 0;
+
+.btn-secondary {
+    $--bs-btn-color: $tertiary;
+}
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
