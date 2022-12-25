@@ -14,11 +14,11 @@ const PDP = () => {
     const {category, id, name, description, specs, images, imagePreview, ratings, numOfReviews, stocks, listPrice, price} = product[0];
     const stocksOption = () => {
         if(stocks > 0 && stocks < 10){
-            return (<Form.Select>
+            return (<Form.Select className="w-100">
                 {[...Array(stocks).keys()].map((a) => <option key={a} value={a}>{++a}</option>)}
             </Form.Select>)
         } else if(stocks > 10){
-            return (<Form.Select>
+            return (<Form.Select className="w-100">
                 {[...Array(10).keys()].map(a => <option key={a} value={a}>{++a}</option>)}
             </Form.Select>)
         } else {
@@ -26,10 +26,15 @@ const PDP = () => {
         }
     }
 
-    const stockDisplay = stocks ? <Form.Group className="d-flex align-items-center justify-content-between">{stocksOption()}
-            <Button variant="primary">Buy Now</Button>
-            <Button variant="secondary">Add To Cart</Button>
-        </Form.Group> : stocksOption();
+    const stockDisplay = stocks ? <>
+            <Form.Group className="select mb-2 mb-lg-0">
+                {stocksOption()}
+            </Form.Group>
+            <Form.Group className="select-actions d-flex align-items-center justify-content-between">
+                <Button variant="primary">Buy Now</Button>
+                <Button variant="secondary">Add To Cart</Button>
+            </Form.Group>
+        </>: stocksOption();
 
     const stocksLeft = stocks > 0 ? <p>{stocks} items left</p> : null;
 
@@ -97,7 +102,7 @@ const PDP = () => {
                                     {price}
                                 </h3>
                             </div>
-                            <Form className="number-of-orders">
+                            <Form className="number-of-orders d-block d-lg-flex align-items-center justify-content-between">
                                 {stockDisplay}
                             </Form>
                             {stocksLeft && <div className="py-2">{stocksLeft}</div>}

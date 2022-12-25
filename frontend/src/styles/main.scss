@@ -110,14 +110,21 @@ header {
         }
     }
     .number-of-orders {
-        select {
-            width: 20%;
+        .select  {
+            select {
+                height: 50px;
+                border-radius: 0;
+                font-size: 1.5rem;
+                text-align: center;
+            }
         }
         button {
-            width: 38%;
             color: #fff;
+            width: 49.5%;
+            font-size: 1.5rem;
         }
     }
+    
     .specs {
         table, tr, td {
             border: 1px solid $primary;
@@ -202,7 +209,9 @@ header {
         font-weight: bold;
     }
 }
+@media(min-width: 360px) {
 
+}
 @media(min-width: 768px){
     .home {
         .carousel {
@@ -215,9 +224,20 @@ header {
             }
         }
     }
+    
 }
 @media(min-width: 992px){
     .sku-card {
         width: 25%;
+    }
+    .pdp {
+        .number-of-orders {
+            .select {
+                width: 19%;
+            }
+            .select-actions {
+                width: 80%;
+            }
+        }
     }
 }
