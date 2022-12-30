@@ -12558,6 +12558,10 @@ header nav button svg {
   color: #edf2f4;
 }
 
+button.btn-secondary, button.btn-primary {
+  color: #fff;
+}
+
 .home .carousel .carousel-inner a.btn {
   border-radius: 0;
   font-weight: bold;
@@ -12616,7 +12620,6 @@ header nav button svg {
 }
 
 .pdp .number-of-orders button {
-  color: #fff;
   width: 49.5%;
   font-size: 1.5rem;
 }
@@ -12630,14 +12633,17 @@ header nav button svg {
 }
 
 .pdp .reviews .col .ratings {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
 .pdp .review {
-  border-top: 1px solid #8d99ae;
   margin-top: 10px;
   padding-top: 10px;
+}
+
+.pdp .review.d-flex {
+  border-top: 1px solid #8d99ae;
 }
 
 .pdp .review .user {
@@ -12661,6 +12667,15 @@ header nav button svg {
 .pdp .review .review-details p.comment {
   margin: 2px 0;
   font-size: 1rem;
+}
+
+.pdp .review-button {
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.pdp .review-button button + button {
+  margin-left: 10px;
 }
 
 .sku-card {

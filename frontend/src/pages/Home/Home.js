@@ -72,7 +72,7 @@ const Home = () => {
         </section>
         <section className="categories">
             <Container>
-                <h2 className="pb-4">Shop By Category</h2>
+                <h2 className="text-center text-md-start pb-4">Shop By Category</h2>
                 <Row className="justify-content-center">
                     {categories.map(c => (
                             <Col xs={12} md={4} key={c.category} className="text-center">
@@ -89,7 +89,7 @@ const Home = () => {
         <section className="best-seller">
             <Container>
                 <div className="d-flex align-items-center pb-4 justify-content-center justify-content-md-start">
-                    <h2 className="pe-4">Best Seller</h2>
+                    <h2 className="text-center text-md-start pe-4">Best Seller</h2>
                     <Link to="best-seller" className="btn btn-outline-primary">See more</Link>
                 </div>
                 <Row className="justify-content-center">
@@ -100,7 +100,7 @@ const Home = () => {
         <section className="top-rated">
             <Container>
                 <div className="d-flex align-items-center pb-4 justify-content-center justify-content-md-start">
-                    <h2 className="pe-4">Top Rated</h2>
+                    <h2 className="text-center text-md-start pe-4">Top Rated</h2>
                     <Link to="best-seller" className="btn btn-outline-primary">See more</Link>
                 </div>
                 <Row className="justify-content-center">

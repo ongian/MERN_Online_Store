@@ -48,6 +48,7 @@ const PDP = () => {
     const productReviews = reviews.filter(r => r.id === Number(params.productId));
     const initialRev = productReviews.length && productReviews[0].reviews.length && productReviews[0].reviews.slice(0, initialReviewDisplay);
     const averageRate = productReviews.length ? Number(productReviews[0].reviews.reduce((a,b) => a + b.ratings, 0) / productReviews[0].reviews.length).toFixed(1) : null;
+    console.log(productReviews)
     const productReviewsDisplay = () => {
         if(initialRev.length){
             return initialRev.map(p => (
@@ -64,9 +65,17 @@ const PDP = () => {
                 </div>
             ))
         } else {
-            return <h6>No review yet!</h6>
+            return <div className="review"><h6>No review yet!</h6></div>
         }
     }
+
+    const reviewButton = productReviews.length ? 
+        <div className="review-button">
+            <Button variant="primary">Write a review</Button>
+            <Button variant="secondary">See All</Button>
+        </div> : <div className="review-button">
+            <Button variant="primary">Be the first to write a review</Button>
+        </div>
     return (
         <div className="pdp">
             <section className="breadcrumbs">
@@ -125,22 +134,19 @@ const PDP = () => {
                         </tbody>
                     </Table>
                 </Container>
+            </section> 
+            <section className="reviews">
+                <Container>
+                    <Row>
+                        <Col><h3>Reviews {productReviews.length > 0 && '(' + productReviews[0].reviews.length + ')'}</h3></Col>
+                        {averageRate ? <Col className="text-end"><Ratings ratings={averageRate} /></Col> : <Col className="text-end"><Ratings ratings={0} /></Col>}
+                    </Row>
+                    <Row>
+                        {productReviewsDisplay()}
+                        {reviewButton}
+                    </Row>
+                </Container>
             </section>
-            {productReviews.length && 
-                <section className="reviews">
-                    <Container>
-                        <Row>
-                            <Col><h3>Reviews ({productReviews[0].reviews.length && productReviews[0].reviews.length})</h3></Col>
-                            {averageRate && <Col className="text-end"><Ratings ratings={averageRate} /></Col>}
-                        </Row>
-                        <Row>
-                            {productReviewsDisplay()}
-                        </Row>
-                    </Container>
-                </section>
-            }
-            
-            PDP
         </div>
     );
 }

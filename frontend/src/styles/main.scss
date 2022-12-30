@@ -51,7 +51,11 @@ header {
         }
     }
 }
-
+button {
+    &.btn-secondary, &.btn-primary {
+        color: #fff;
+    }
+}
 .home {
     .carousel {
         .carousel-inner {
@@ -119,7 +123,6 @@ header {
             }
         }
         button {
-            color: #fff;
             width: 49.5%;
             font-size: 1.5rem;
         }
@@ -136,15 +139,17 @@ header {
     .reviews {
         .col {
             .ratings {
-                font-size: 1.5rem;
+                font-size: 1.25rem;
                 font-weight: bold;
             }
         }
     }
     .review {
-        border-top: 1px solid $secondary;
         margin-top: 10px;
         padding-top: 10px;
+        &.d-flex {
+            border-top: 1px solid $secondary;
+        }
         .user {
             padding: 25px;
             background: $primary;
@@ -163,6 +168,13 @@ header {
                 margin: 2px 0;
                 font-size: 1rem;
             }
+        }
+    }
+    .review-button {
+        margin-top: 10px;
+        padding-top: 10px;
+        button + button {
+            margin-left: 10px;
         }
     }
 }
