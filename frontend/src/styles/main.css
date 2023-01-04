@@ -12527,6 +12527,10 @@ section {
   padding: 50px 15px;
 }
 
+section.breadcrumbs {
+  padding-bottom: 0px;
+}
+
 .container {
   max-width: 1065px;
 }
@@ -12590,6 +12594,42 @@ button.btn-secondary, button.btn-primary {
 .home .container .col-md-4 img {
   max-height: 125px;
   margin: auto;
+}
+
+.pdp .img-preview-con .max-preview {
+  text-align: center;
+}
+
+.pdp .img-preview-con .max-preview img {
+  max-height: 500px;
+}
+
+.pdp .img-preview-con .min-preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.pdp .img-preview-con .min-preview div {
+  width: 90px;
+  height: 90px;
+  padding: 4px;
+  border: 1px solid #8d99ae;
+  margin: 2px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.pdp .img-preview-con .min-preview div img {
+  max-width: 100%;
+  width: auto;
 }
 
 .pdp .share-and-wishlist svg {

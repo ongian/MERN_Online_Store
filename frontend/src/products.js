@@ -12,7 +12,7 @@ const products = [
             {Storage: '256GB SSD'},
             {StorageType: 'SSD'}
         ],
-        images: ['1','2','3','4','5','6'],
+        images: ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg'],
         imagePreview: 'preview.png',
         ratings: 4.4,
         numOfReviews: 35,
@@ -35,7 +35,7 @@ const products = [
             {Storage: '512GB SSD'},
             {StorageType: 'SSD'}
         ],
-        images: ['1','2','3','4','5'],
+        images: ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg'],
         imagePreview: 'preview.png',
         ratings: 4.1,
         numOfReviews: 35,
@@ -58,7 +58,7 @@ const products = [
             {Battery: '5000mAh Li-ion battery'},
             {Processor: 'MediaTek 6889'}
         ],
-        images: ['1','2','3','4','5','6'],
+        images: ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg'],
         imagePreview: 'preview.png',
         ratings: 4.8,
         numOfReviews: 35,
@@ -81,7 +81,7 @@ const products = [
             {Battery: '5000mAh Li-ion battery'},
             {Processor: 'MediaTek 6889'}
         ],
-        images: ['1','2','3','4','5','6'],
+        images: ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg'],
         imagePreview: 'preview.png',
         ratings: 4.2,
         numOfReviews: 30,

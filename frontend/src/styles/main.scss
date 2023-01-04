@@ -22,6 +22,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 section {
     padding: 50px 15px;
+    &.breadcrumbs {
+        padding-bottom: 0px;
+    }
 }
 .container {
     max-width: 1065px;
@@ -94,6 +97,32 @@ button {
 }
 
 .pdp {
+    .img-preview-con {
+        .max-preview {
+            text-align: center;
+            img {
+                max-height: 500px;
+            }
+        }
+        .min-preview {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            div {
+                width: 90px;
+                height: 90px;
+                padding: 4px;
+                border: 1px solid $secondary;
+                margin: 2px;
+                overflow: hidden;
+                box-sizing: border-box;
+                img {
+                    max-width: 100%;
+                    width: auto;
+                }
+            }
+        }
+    }
     .share-and-wishlist {
         svg {
             font-size: 2rem;

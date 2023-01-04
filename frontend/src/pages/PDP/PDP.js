@@ -6,12 +6,13 @@ import { Link, useParams } from 'react-router-dom';
 import Ratings from '../../components/Ratings/Ratings';
 import products from '../../products';
 import reviews from '../../reviews';
+import ImagePreview from './ImagePreview/ImagePreview';
 
 const PDP = () => {
     const [initialReviewDisplay, setInitialReviewDisplay] = useState(5);
     const params = useParams();
     const product = products.filter((a) => a.id === Number(params.productId));
-    const {category, id, name, description, specs, images, imagePreview, ratings, numOfReviews, stocks, listPrice, price} = product[0];
+    const {category, id, name, description, specs, images, imagePreview, ratings, numOfReviews, stocks, listPrice, price, variants} = product[0];
     const stocksOption = () => {
         if(stocks > 0 && stocks < 10){
             return (<Form.Select className="w-100">
@@ -90,14 +91,15 @@ const PDP = () => {
             <section className="upper-pdp">
                 <Container>
                     <Row>
-                        <Col xs={12} md={6}>
-                        
+                        <Col xs={12} md={7}>
+                            <ImagePreview name={name} id={id} images={images} />
                         </Col>
-                        <Col xs={12} md={6}>
+                        <Col xs={12} md={5}>
                             <h1>
                                 {name}
                             </h1>
                             {averageRate === null ? <p>No Reviews Yet!</p> : <Ratings ratings={ratings} numOfReview={productReviews[0].reviews.length} />}
+                            <p>{description}</p>
                             <div className="share-and-wishlist py-2">
                                 <FontAwesomeIcon icon={solid('share-nodes')} />
                                 <FontAwesomeIcon icon={regular('heart')} />
